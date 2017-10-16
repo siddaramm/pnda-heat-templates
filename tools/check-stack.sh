@@ -1,3 +1,14 @@
+if [[ $1 == "" ]] || [[ $2 != "" ]]; then
+    echo "Try  'check-stack.sh --help '  for more information"
+    exit -1;
+fi
+
+if [[ $1 == "--help" ]] || [[ $1 == "-h" ]]; then
+    echo "Usage check-stack.sh <stack-name>"
+    echo "Example: check-stack.sh pnda"
+    exit -1;
+fi
+
 D=$(date)
 LOG="$1.stack.log"
 echo "$D" > $LOG
